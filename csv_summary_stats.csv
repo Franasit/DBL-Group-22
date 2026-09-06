@@ -1,0 +1,13 @@
+Folder Name,File Name,Rows,Columns,Data Types,Missing Values Count,Temporal Coverage,Spatial Coverage,Resolution,CRS,Completely Empty Columns,Status
+Darthmouth_Flood_Observatory,1541_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",21,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,1545_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",21,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,1542_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",21,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,1548_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",23,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,1505_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",22,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,100205_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",13,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,1547_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",23,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,1543_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",22,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,11842_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",20,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,1544_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",21,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,28546_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",22,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success
+Darthmouth_Flood_Observatory,11808_discharge.csv,10366,2,"Date (object), Discharge (m3/s) (float64)",21,Date: 1998-01-01 00:00:00 to 2026-05-19 00:00:00,,,Not natively supported in CSV,None,Success

@@ -1,0 +1,32 @@
+ ### 1. Dartmouth Flood Observatory (River Discharge Data)
+
+  Decision: Retain (with limitations)
+  • What it measures: River discharge (volume of water flowing per second, measured in m³/s) from 1998 through 2026.
+  • Relevance to flood risk: This is one of the most critical and direct indicators of fluvial (river) flooding. High discharge spikes typically
+  correlate perfectly with flood events, making this dataset highly relevant for time-series forecasting, historical flood matching, and return-
+  period calculations.
+  • Limitations:
+      • Lack of Spatial Coordinates: The CSVs only contain Date and discharge_m3s. The geographic location is only hinted at by the station IDs in
+      the filename (e.g., 1541, 100205). To map flood risk spatially, you will absolutely need to join this with a metadata table that provides
+      the Latitude/Longitude for each station ID.
+      • Lack of Flood Thresholds: Absolute discharge doesn't automatically equal a flood. You will need external context (like channel capacity or
+      historic flood stages) to determine at what discharge m³/s a specific river actually overflows its banks.
+
+
+  ### 2. Water Levels Lakes (Lake Hydrology Data)
+
+  Decision: Retain (with limitations) (Note: The directory is currently empty in our analysis, but evaluating the data type conceptually)
+
+  • What it measures: Likely the surface elevation or volume of lakes/reservoirs over time.
+  • Relevance to flood risk: Highly relevant for lacustrine (lake) flooding and understanding regional hydrological saturation. When lakes reach
+  capacity, downstream river flood risk increases significantly because the lake can no longer act as a buffer for heavy rainfall.
+  • Limitations:
+      • Lake levels are more localized. While they indicate flood risk for the immediate shoreline, their impact on broader regional flood risk
+      requires understanding the topological network (which rivers flow in/out of the lake).
+
+
+  ### Final Recommendation for your Pipeline
+
+  Both datasets are highly valuable and should be retained. However, because the CSVs currently lack embedded spatial data (CRS/Coordinates), your
+  next step should be to locate the spatial metadata files (often .shp, .geojson, or a master stations_metadata.csv) that link the file IDs (like
+  1541) to their physical coordinates on the map. Without those coordinates, you can analyze the when of the flood risk, but not the where.

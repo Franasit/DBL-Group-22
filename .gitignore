@@ -8,5 +8,6 @@ raw_data
 cache
 .idea
 .git
-.Darthmouth_Flood_Observatory
-.Water_levels_lakes
+Darthmouth_Flood_Observatory/
+Water_levels_lakes/
+Processed_Data/

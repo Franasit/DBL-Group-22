@@ -1,0 +1,1 @@
+time,datetime,water_level,error,lake,qc_missing_date,qc_missing_water_level,qc_invalid_water_level,qc_satellite_code_corrected,qc_has_issue

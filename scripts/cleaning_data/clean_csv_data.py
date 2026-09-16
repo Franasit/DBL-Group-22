@@ -1,5 +1,10 @@
 import os
 import glob
+import sys
+import os
+# Ensure script runs from the project root
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pandas as pd
 import numpy as np
 
@@ -80,3 +85,4 @@ if __name__ == "__main__":
                 print(f"  -> Error processing {file_path}: {e}")
                 
     print(f"\nAll cleaning finished. Processed files are in: {output_base_dir}")
+

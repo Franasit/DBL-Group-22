@@ -14,3 +14,10 @@ Processed_Data/
 data-JBG060-2026
 
 outputs/upstream_analysis/data/
+
+processed_data/
+processing_data/
+*.csv
+*.parquet
+*.tif
+*.nc

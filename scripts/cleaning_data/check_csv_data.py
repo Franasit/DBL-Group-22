@@ -1,5 +1,10 @@
 import os
 import glob
+import sys
+import os
+# Ensure script runs from the project root
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pandas as pd
 import numpy as np
 
@@ -125,3 +130,4 @@ if __name__ == "__main__":
         output_csv = "/Users/maksadamowicz/Desktop/DBL-Group-22/csv_summary_stats.csv"
         results_df.to_csv(output_csv, index=False)
         print(f"\nSaved full results to: {output_csv}")
+

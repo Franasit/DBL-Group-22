@@ -14,8 +14,13 @@ from shapely.geometry import Point
 import warnings
 warnings.filterwarnings('ignore')
 
-base_data_path = '../../raw_data'
-output_dir = '../../outputs'
+from pathlib import Path
+
+# Resolve project root dynamically so script works from root or subfolder
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parents[1]
+base_data_path = PROJECT_ROOT / 'raw_data' if (PROJECT_ROOT / 'raw_data').exists() else PROJECT_ROOT / 'data-JBG060-2026'
+output_dir = PROJECT_ROOT / 'outputs'
 os.makedirs(output_dir, exist_ok=True)
 
 # load adm3

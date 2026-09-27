@@ -1,8 +1,17 @@
 import pandas as pd
 import numpy as np
 
+from pathlib import Path
+
+# Resolve project root dynamically
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parents[1]
+
 # load aligned data
-df = pd.read_csv("../../outputs/adm3_exposure_aligned.csv")
+aligned_path = PROJECT_ROOT / "outputs" / "adm3_exposure_aligned.csv"
+if not aligned_path.exists():
+    aligned_path = Path("../../outputs/adm3_exposure_aligned.csv")
+df = pd.read_csv(aligned_path)
 
 # cols to normalize
 exposure_cols = ['population_2024', 'cattle_sum', 'cropland_score', 'health_facilities_count']
@@ -28,7 +37,7 @@ df['combined_exposure_score'] = df[norm_cols].mean(axis=1)
 df_sorted = df.sort_values('combined_exposure_score', ascending=False)
 
 # save
-output_path = "../../outputs/adm3_exposure_normalized.csv"
+output_path = PROJECT_ROOT / "outputs" / "adm3_exposure_normalized.csv"
 df.to_csv(output_path, index=False)
 print(f"saved {output_path}")
 

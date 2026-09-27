@@ -3,8 +3,13 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import matplotlib.colors as colors
 
-df = pd.read_csv('../../outputs/adm3_exposure_normalized.csv')
-gdf = gpd.read_file('../../raw_data/Administrative boundaries/ssd_admin3.geojson')
+from pathlib import Path
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parents[1]
+raw_data_dir = PROJECT_ROOT / 'raw_data' if (PROJECT_ROOT / 'raw_data').exists() else PROJECT_ROOT / 'data-JBG060-2026'
+
+df = pd.read_csv(PROJECT_ROOT / 'outputs' / 'adm3_exposure_normalized.csv')
+gdf = gpd.read_file(raw_data_dir / 'Administrative boundaries' / 'ssd_admin3.geojson')
 
 # merge
 merged = gdf.merge(df[['adm3_pcode', 'combined_exposure_score', 'flood_hazard_2022_count_norm']], on='adm3_pcode')
@@ -70,7 +75,7 @@ plt.xlabel('Exposure Index')
 plt.ylabel('Flood Hazard Score (2022)')
 plt.title('Scatter Plot: Exposure vs Hazard')
 plt.tight_layout()
-plt.savefig('../../outputs/exposure_scatter_plot.png', dpi=300)
+plt.savefig(PROJECT_ROOT / 'outputs' / 'exposure_scatter_plot.png', dpi=300)
 plt.close()
 
 # plot heatmap
@@ -94,6 +99,6 @@ cbar.set_label('Combined Extreme Risk Score (Hazard + Exposure)', fontsize=11)
 ax.axis('off')
 ax.set_title('Risk Heatmap: YlOrRd Scale', fontsize=15)
 plt.tight_layout()
-plt.savefig('../../outputs/exposure_heatmap_map.png', dpi=300)
+plt.savefig(PROJECT_ROOT / 'outputs' / 'exposure_heatmap_map.png', dpi=300)
 plt.close()
 

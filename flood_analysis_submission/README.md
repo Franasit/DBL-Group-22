@@ -82,7 +82,7 @@ Group22_submission/                      ← any name you like
     └── Darthmouth Flood Observatory/    100205_discharge.csv, 1505_discharge.csv
 ```
 
-**The only folder you need to create is `data-JBG060-2026`.** Unzip the course data package and keep its sub-folder names exactly as they are. The `GDP` folder in the package is not used and can be left out.
+**The raw data is not included in this zip because of its size.** The zip contains an empty `data-JBG060-2026` folder (holding only `PUT_RAW_DATA_HERE.txt`). Before running the notebook, copy the contents of the course data package into that folder so it looks like the tree above, keeping the sub-folder names exactly as they are. The `GDP` folder in the package is not used and can be left out.
 
 The notebook also finds the raw data if the folder is called `raw_data`, or if it sits one level above the notebook.
 
